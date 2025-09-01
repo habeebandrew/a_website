@@ -49,7 +49,7 @@
         <section id="about" class="container">
             <h2>About Me</h2>
             <div class="about-content">
-                <img src="https://via.placeholder.com/150" alt="Alice Fayad Profile Picture" class="profile-pic">
+                <!-- <img src="https://via.placeholder.com/150" alt="Alice Fayad Profile Picture" class="profile-pic"> -->
                 <p>I recently completed my Diploma in Travel and Tourism and have strong organizational skills gained through event planning. I am detail-oriented, customer-focused, and eager to start my career in the travel industry.</p>
             </div>
         </section>
@@ -143,11 +143,11 @@
             <h2>Testimonials</h2>
             <div class="testimonial">
                 <blockquote>"Alice planned the perfect trip for our family. Every detail was taken care of!"</blockquote>
-                <cite>– Jane Doe</cite>
+                <cite>– Jane </cite>
             </div>
             <div class="testimonial">
                 <blockquote>"An unforgettable experience, thanks to Alice's expertise and recommendations."</blockquote>
-                <cite>– John Smith</cite>
+                <cite>– John </cite>
             </div>
         </section>
 
@@ -155,17 +155,19 @@
         <section id="contact" class="container">
             <h2>Contact</h2>
             <p class="contact-lead">Let’s plan your next journey together!</p>
-            <form id="contact-form">
+            <form id="contact-form" onsubmit="sendToWhatsApp(event)">
                 <input type="text" name="name" placeholder="Your Name" required>
-                <input type="email" name="email" placeholder="Your Email" required>
+                <select name="service" required>
+                    <option value="" disabled selected>Select a Service</option>
+                    <option value="Flight Booking">Flight Booking</option>
+                    <option value="Hotel Reservation">Hotel Reservation</option>
+                    <option value="Tour Package">Tour Package</option>
+                    <option value="Visa Assistance">Visa Assistance</option>
+                    <option value="Other">Other</option>
+                </select>
                 <textarea name="message" placeholder="Your Message" required></textarea>
                 <button type="submit" class="btn">Send Message</button>
             </form>
-            <div class="contact-links">
-                <a href="mailto:alice.fayad@example.com"><i class="fas fa-envelope"></i> Email</a>
-                <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
-                <a href="assets/pdf/Alice_Fayad_CV.pdf" download><i class="fas fa-file-download"></i> Download CV</a>
-            </div>
         </section>
     </main>
 
